@@ -27,6 +27,21 @@ class ContactSubmission(db.Model):
     email = db.Column(db.String(100), nullable=False)
     subject = db.Column(db.String(200), nullable=False)
     message = db.Column(db.Text, nullable=False)
+    timestamp = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+
+    def __init__(self, name, email, subject, message):
+        self.name = name
+        self.email = email
+        self.subject = subject
+        self.message = message
 
     def __repr__(self):
         return f'<ContactSubmission {self.name}>'
+
+    @validates('email')
+    def validate_email(self, key, address):
+        try:
+            validate_email(address)
+            return address
+        except EmailNotValidError as e:
+            raise ValueError(str(e))
