@@ -7,7 +7,7 @@ from api.utils import generate_sitemap, APIException
 
 api = Blueprint('api', __name__)
 
-
+# route for user
 @api.route('/hello', methods=['POST', 'GET'])
 def handle_hello():
 
@@ -16,3 +16,28 @@ def handle_hello():
     }
 
     return jsonify(response_body), 200
+
+# api for submitting a contact form
+@app.route('/api/contact', methods=['POST'])
+def submit_contact_form():
+    data = request.get_json()
+
+    # Perform input validation, including email validation, and return error messages if necessary
+    if not data.get('name') or not data.get('email') or not data.get('subject') or not data.get('message'):
+        return jsonify({"error": "Missing required fields"}), 400
+
+    if not re.match(r"[^@]+@[^@]+\.[^@]+", data['email']):
+        return jsonify({"error": "Invalid email address"}), 400
+
+    new_submission = ContactSubmission(
+        name=data['name'],
+        email=data['email'],
+        subject=data['subject'],
+        message=data['message']
+    )
+    db.session.add(new_submission)
+    db.session.commit()
+
+    # Send an email notification or perform any other desired action
+
+    return jsonify({'message': 'Contact form submitted successfully.'}), 201
