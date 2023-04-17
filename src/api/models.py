@@ -1,7 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from sqlalchemy.orm import validates
-from email_validator import validate_email, EmailNotValidError
 
 db = SQLAlchemy()
 

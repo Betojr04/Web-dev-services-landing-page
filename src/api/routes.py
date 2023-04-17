@@ -19,7 +19,7 @@ def handle_hello():
     return jsonify(response_body), 200
 
 # api for submitting a contact form
-@app.route('/api/contact', methods=['POST'])
+@api.route('/api/contact', methods=['POST'])
 def submit_contact_form():
     data = request.get_json()
 
