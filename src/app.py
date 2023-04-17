@@ -37,7 +37,7 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'hello@betosmoney.com'
-app.config['MAIL_PASSWORD'] = 'Beto839914!'
+app.config['MAIL_PASSWORD'] = 'Beto839914'
 app.config['MAIL_DEFAULT_SENDER'] = ('Alberto Valtierra Jr', 'hello@betosmoney.com')
 
 
