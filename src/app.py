@@ -12,6 +12,12 @@ from api.routes import api
 from api.admin import setup_admin
 from api.commands import setup_commands
 from flask_mail import Mail, Message
+import logging
+from flask_talisman import Talisman
+from flask_seasurf import SeaSurf
+from flask_caching import Cache
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 #from models import Person
 
@@ -93,4 +99,12 @@ def send_email_notification(submission):
     Message: {submission.message}
     """
     mail.send(msg)
+
+cache = Cache(app, config={'CACHE_TYPE': 'simple'})
+
+@app.route('/some_route', methods=['GET'])
+@cache.cached(timeout=60)
+def some_route():
+    msg = {dfb}
+    #my function code here
 
