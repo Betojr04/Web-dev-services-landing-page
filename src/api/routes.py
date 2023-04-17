@@ -4,6 +4,7 @@ This module takes care of starting the API Server, Loading the DB and Adding the
 from flask import Flask, request, jsonify, url_for, Blueprint
 from api.models import db, User
 from api.utils import generate_sitemap, APIException
+import re
 
 api = Blueprint('api', __name__)
 
@@ -22,10 +23,11 @@ def handle_hello():
 def submit_contact_form():
     data = request.get_json()
 
-    # Perform input validation, including email validation, and return error messages if necessary
+    # Perform input validation and return error messages if necessary
     if not data.get('name') or not data.get('email') or not data.get('subject') or not data.get('message'):
         return jsonify({"error": "Missing required fields"}), 400
 
+    # Validate the email format
     if not re.match(r"[^@]+@[^@]+\.[^@]+", data['email']):
         return jsonify({"error": "Invalid email address"}), 400
 

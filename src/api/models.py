@@ -37,11 +37,3 @@ class ContactSubmission(db.Model):
 
     def __repr__(self):
         return f'<ContactSubmission {self.name}>'
-
-    @validates('email')
-    def validate_email(self, key, address):
-        try:
-            validate_email(address)
-            return address
-        except EmailNotValidError as e:
-            raise ValueError(str(e))
