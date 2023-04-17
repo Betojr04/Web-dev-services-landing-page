@@ -41,5 +41,5 @@ def submit_contact_form():
     db.session.commit()
 
     # Send an email notification or perform any other desired action
-
+    send_email_notification(new_submission)
     return jsonify({'message': 'Contact form submitted successfully.'}), 201
