@@ -14,7 +14,7 @@ export const Navbar = () => {
             About
           </Link>
           <Link to="/home" className="navbar-link">
-            Portfolio
+            Projects
           </Link>
           <Link to="/home" className="navbar-link">
             Contact
