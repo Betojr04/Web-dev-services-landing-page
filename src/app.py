@@ -11,11 +11,9 @@ from api.models import db
 from api.routes import api
 from api.admin import setup_admin
 from api.commands import setup_commands
-from flask_mail import Mail, Message
+
 import logging
-from flask_talisman import Talisman
-from flask_seasurf import SeaSurf
-from flask_caching import Cache
+
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -37,14 +35,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 MIGRATE = Migrate(app, db, compare_type = True)
 db.init_app(app)
 
-mail = Mail(app)
-# email configuration
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'hello@betosmoney.com'
-app.config['MAIL_PASSWORD'] = 'Beto839914'
-app.config['MAIL_DEFAULT_SENDER'] = ('Alberto Valtierra Jr', 'hello@betosmoney.com')
 
 
 # Allow CORS requests to this API
@@ -87,24 +77,4 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=PORT, debug=True)
 
 
-def send_email_notification(submission):
-    msg = Message(
-        subject="New contact form submission",
-        recipients=["your-email@example.com"],
-    )
-    msg.body = f"""
-    Name: {submission.name}
-    Email: {submission.email}
-    Subject: {submission.subject}
-    Message: {submission.message}
-    """
-    mail.send(msg)
-
-cache = Cache(app, config={'CACHE_TYPE': 'simple'})
-
-@app.route('/some_route', methods=['GET'])
-@cache.cached(timeout=60)
-def some_route():
-    msg = {dfb}
-    #my function code here
 
