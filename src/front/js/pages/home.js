@@ -9,6 +9,7 @@ export const Home = () => {
     <div className="text-center mt-5">
       <main>
         <h1>Alberto Valtierra Jr</h1>
+        <p>Software Developer and Entreprenuer</p>
       </main>
     </div>
   );
