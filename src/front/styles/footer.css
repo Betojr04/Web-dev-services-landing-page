@@ -1,3 +1,22 @@
 .footer {
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.icon-container i {
+  font-size: 5em; /* Increase the size to 5 times its current size */
+  transition: all 0.3s ease; /* Optional: for smooth hover effect */
+}
+
+.icon-container i:hover {
+  transform: scale(1.1); /* Optional: for a slight zoom effect on hover */
+  cursor: pointer; /* Optional: for a hand cursor on hover */
 }

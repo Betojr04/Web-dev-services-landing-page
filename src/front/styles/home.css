@@ -5,3 +5,12 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 50px 20px;
+  height: 45rem;
+}
