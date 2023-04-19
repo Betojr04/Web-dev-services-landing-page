@@ -12,7 +12,7 @@
 }
 
 .icon-container i {
-  font-size: 5em; /* Increase the size to 5 times its current size */
+  font-size: 3em; /* Increase the size to 5 times its current size */
   transition: all 0.3s ease; /* Optional: for smooth hover effect */
 }
 
