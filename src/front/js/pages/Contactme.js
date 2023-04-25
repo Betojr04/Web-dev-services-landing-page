@@ -10,7 +10,9 @@ const ContactMe = () => {
         <label htmlFor="name">Name</label>
         <input type="text" id="name" placeholder="Your Name" />
 
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">
+          email from which you are sending me an email
+        </label>
         <input type="email" id="email" placeholder="Your Email" />
 
         <label htmlFor="message">Message</label>
