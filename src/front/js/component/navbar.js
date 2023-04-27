@@ -10,10 +10,10 @@ export const Navbar = () => {
           <Link to="/home" className="navbar-link">
             Home
           </Link>
-          <Link to="/home" className="navbar-link">
+          <Link to="/aboutme" className="navbar-link">
             About
           </Link>
-          <Link to="/home" className="navbar-link">
+          <Link to="/projects" className="navbar-link">
             Projects
           </Link>
           <Link to="/contact" className="navbar-link">

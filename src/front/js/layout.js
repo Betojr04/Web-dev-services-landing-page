@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 import { BackendURL } from "./component/backendURL";
 
@@ -25,6 +25,7 @@ const Layout = () => {
         <ScrollToTop>
           <Navbar />
           <Routes>
+            <Route exact path="/" component={Home} />
             <Route element={<Home />} path="/home" />
             <Route element={<ContactMe />} path="/contact" />
             <Route element={<Single />} path="/single/:theid" />
