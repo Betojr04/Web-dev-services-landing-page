@@ -1,4 +1,4 @@
-.footer {
+/* .footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,11 +12,42 @@
 }
 
 .icon-container i {
-  font-size: 3em; /* Increase the size to 5 times its current size */
-  transition: all 0.3s ease; /* Optional: for smooth hover effect */
+  font-size: 3em; z
+  transition: all 0.3s ease; Optional: for smooth hover effect
 }
 
 .icon-container i:hover {
-  transform: scale(1.1); /* Optional: for a slight zoom effect on hover */
-  cursor: pointer; /* Optional: for a hand cursor on hover */
+  transform: scale(1.1); Optional: for a slight zoom effect on hover
+  cursor: pointer; Optional: for a hand cursor on hover
+} */
+
+.custom-footer {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 1rem 0;
+}
+
+.custom-footer a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.custom-footer a:hover {
+  color: #00a4ff;
+}
+
+.icon-container {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.icon-container li {
+  margin: 0 1rem;
+}
+
+.icon-container i {
+  font-size: 1.5rem;
 }

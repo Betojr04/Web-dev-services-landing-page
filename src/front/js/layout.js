@@ -20,7 +20,7 @@ const Layout = () => {
     return <BackendURL />;
 
   return (
-    <div>
+    <div className="d-flex flex-column min-vh-100">
       <BrowserRouter basename={basename}>
         <ScrollToTop>
           <Navbar />
