@@ -5,8 +5,9 @@ const AboutMe = () => {
     <div className="container">
       <div className="text-center">
         <main>
-          <h1>Alberto Valtierra Jr</h1>
+          <h1>About Me</h1>
           <p>Software Developer and Entreprenuer</p>
+          <p>I am a Software Developer</p>
         </main>
       </div>
     </div>
