@@ -1,11 +1,10 @@
 import React from "react";
-import "../../styles/projects.css";
 
 const Projects = () => {
   return (
-    <div>
-      <h1>Here are all of my projects thus far</h1>
-    </div>
+    <section>
+      <h1>These are my projects</h1>
+    </section>
   );
 };
 
