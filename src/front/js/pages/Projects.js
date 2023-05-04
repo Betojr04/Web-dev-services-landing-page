@@ -26,9 +26,6 @@ const Projects = () => {
         </section>
       </div>
     </div>
-    // <section className="Projects">
-    //   <h1>These are my projects</h1>
-    // </section>
   );
 };
 
