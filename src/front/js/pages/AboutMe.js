@@ -1,5 +1,6 @@
 import React from "react";
 import "../../../front/img/beto.jpeg";
+import "../../styles/aboutme.css";
 
 const AboutMe = () => {
   return (
