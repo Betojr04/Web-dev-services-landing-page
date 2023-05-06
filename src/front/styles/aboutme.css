@@ -8,4 +8,7 @@ div {
 img {
   width: 25rem;
   height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 }
