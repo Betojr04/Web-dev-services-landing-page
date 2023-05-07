@@ -1,11 +1,28 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const Projects = () => {
+const Project = ({ project }) => {
+  const { title, description, technologies, repoLink } = project;
+
   return (
-    <div className="container">
-      <div className="text-center"></div>
+    <div className="project">
+      <h3>{title}</h3>
+      <p>{description}</p>
+      <p>Technologies used: {technologies.join(", ")}</p>
+      <a href={repoLink} target="_blank" rel="noopener noreferrer">
+        View Repository
+      </a>
     </div>
   );
 };
 
-export default Projects;
+Project.propTypes = {
+  project: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
+    repoLink: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
+export default Project;
