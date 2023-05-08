@@ -11,15 +11,23 @@ const projectData = [
       "Python",
       "SQL",
       "PostgreSql",
-      "",
     ],
-    repoLink: "https://github.com/your-username/project-1",
+    repoLink: "https://github.com/Betojr04/NoStrings.git",
   },
   {
     title: "MoneyMate",
-    description: "This is a description for project 2.",
-    technologies: ["Node.js", "Express", "PostgreSQL"],
-    repoLink: "https://github.com/your-username/project-2",
+    description:
+      "Developing a secure and feature-rich personal finance web app, incorporating custom and Yodlee APIs for bank account integration, user data encryption, privacy, and authentication, alongside responsive design, state management, rigorous testing, CI/CD, localization, PWA capabilities, performance optimization, accessibility, and thorough documentation. Built using React, Bootstrap, Python, Flask, and SQL-Alchemy to provide an exceptional user experience.",
+    technologies: [
+      "React",
+      "Javascript",
+      "PostgreSQL",
+      "Python",
+      "Flask",
+      "SQL-Alchemy",
+      "Rest API's",
+    ],
+    repoLink: "https://github.com/Betojr04/Money-Mate.git",
   },
 ];
 
