@@ -1,0 +1,18 @@
+.projects-container {
+  display: flex;
+  gap: 16px; /* Adjust this value as per your preferred spacing between project columns */
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Adjust this value as per your preferred spacing between project information */
+  flex: 1; /* Makes sure each project takes up equal space */
+}
+
+.project-title,
+.project-description,
+.project-technologies,
+.project-repo {
+  /* You can add additional styles for each element as needed */
+}

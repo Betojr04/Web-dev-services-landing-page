@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Project from "./Project";
+import Project from "../pages/Project";
 
 const Projects = ({ projects }) => (
   <div className="projects-container">

@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "../../styles/project.css";
 
 const Project = ({ project }) => {
   const { title, description, technologies, repoLink } = project;
 
   return (
-    <div className="project">
+    <div className="projects-container">
       <h3>{title}</h3>
       <p>{description}</p>
       <p>Technologies used: {technologies.join(", ")}</p>
