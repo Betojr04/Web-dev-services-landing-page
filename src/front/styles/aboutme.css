@@ -1,4 +1,4 @@
-div {
+/* div {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -11,4 +11,19 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: start;
+} */
+
+.container {
+  height: 100vh; /* Fill the full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 25rem;
+  height: 25rem;
+  object-fit: cover; /* This will make sure the image covers the entire space while keeping its aspect ratio */
+  margin-bottom: 1rem; /* Adding some margin at the bottom of the image */
 }

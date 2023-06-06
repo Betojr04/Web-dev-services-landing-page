@@ -5,10 +5,10 @@ import "../../styles/aboutme.css";
 const AboutMe = () => {
   return (
     <div className="container">
-      <div className="text-center">
+      <div className="d-flex flex-column align-items-center justify-content-center">
         <section id="about">
           <h2>About Me</h2>
-          <img src="beto.jpeg" alt="Your Name" />
+          <img src="beto.jpeg" alt="Your Name" className="my-3" />
           <h3>Alberto Valtierra</h3>
           <p class="subtitle">
             Full Stack Software Developer | Phoenix, Arizona
