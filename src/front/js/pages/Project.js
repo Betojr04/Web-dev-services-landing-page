@@ -17,7 +17,7 @@ const Project = ({ project }) => {
       </div>
       <div className="project-details">
         <h3>{title}</h3>
-        <p>{description}</p>
+        <div className="project-description">{description}</div>
         <p>Technologies used: {technologies.join(", ")}</p>
       </div>
     </a>

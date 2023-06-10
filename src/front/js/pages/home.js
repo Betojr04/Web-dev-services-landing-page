@@ -7,12 +7,10 @@ export const Home = () => {
 
   return (
     <div className="container">
-      <div className="text-center">
-        <main>
-          <h1>Alberto Valtierra Jr</h1>
-          <p>Software Developer and Entreprenuer</p>
-        </main>
-      </div>
+      <main>
+        <h1>Alberto Valtierra Jr</h1>
+        <p>Software Developer and Entrepreneur</p>
+      </main>
     </div>
   );
 };
