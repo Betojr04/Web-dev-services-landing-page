@@ -6,7 +6,11 @@ const ProjectsPage = () => {
   return (
     <div className="container">
       <h2>My Projects</h2>
-      <Projects projects={projectData} />
+      {projectData.length ? (
+        <Projects projects={projectData} />
+      ) : (
+        <p>No projects found. Please check back later!</p>
+      )}
     </div>
   );
 };
